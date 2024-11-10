@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#1E555C] h-screen w-screen">
       <Navigation />
       <Header />
     </div>
