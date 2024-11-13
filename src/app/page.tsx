@@ -1,13 +1,18 @@
+"use client";
 import Header from "@/components/Header/Header";
 import Navigation from "@/components/Navigation";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { GrLinkNext } from "react-icons/gr";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
+  const path = usePathname();
+
+  console.log(path);
   return (
     <>
-      <div className="bg-[#1E555C] h-screen w-screen">
+      <div className="bg-[#1E555C] h-full w-screen">
         <Navigation />
         <div className=" flex flex-col justify-around items-center">
           <Header />
@@ -48,7 +53,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full flex items-end justify-end mt-5">
+        <div className="w-full flex items-end justify-end mt-5 mb-5">
           <a href="/projects">
             <div className="bg-[#F15152] h-10 w-40 flex justify-around items-center p-2 rounded-full mr-2 shadow-black shadow-md border-2 border-black text-white hover:text-black  duration-300">
               <strong className="">Proyectos</strong>

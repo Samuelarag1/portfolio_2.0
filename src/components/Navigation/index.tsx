@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { LuDownload, LuLanguages } from "react-icons/lu";
 import Switch from "../Switch";
+import { usePathname } from "next/navigation";
 
 function Navigation() {
   const [toggle, setToggle] = useState<boolean>(false);
+  const path = usePathname();
 
   const handleOnToggle = () => {
     setToggle((prevToggle) => !prevToggle);
@@ -38,15 +40,36 @@ function Navigation() {
               </button>
             </div>
           </div>
-          <a href="#" className="block mt-4 ml-4 text-white">
-            Skills
-          </a>
-          <a href="#" className="block mt-4 ml-4 text-white">
-            Proyectos
-          </a>
-          <a href="#" className="block mt-4 ml-4 text-white">
-            Un poco mas sobre mi
-          </a>
+          <div className="w-full mt-5 font-bold text-2xl">
+            {path !== "/" ? (
+              <a
+                href="/"
+                className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
+              >
+                Inicio
+              </a>
+            ) : (
+              ""
+            )}
+            <a
+              href="/projects"
+              className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
+            >
+              Proyectos
+            </a>
+            <a
+              href="/skills"
+              className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
+            >
+              Skills
+            </a>
+            <a
+              href="/about"
+              className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
+            >
+              Sobre mi
+            </a>
+          </div>
         </div>
       </div>
     </nav>
