@@ -14,7 +14,7 @@ function Navigation() {
   };
 
   return (
-    <nav className="lg:w-full h-20 lg:flex lg:justify-around bg-[#3A2E39] lg:items-center flex flex-col justify-center">
+    <nav className="lg:w-full h-20 lg:flex lg:justify-around bg-[#3A2E39] lg:items-center flex flex-col justify-center bg-opacity-50">
       <div className="mr-2 flex w-full justify-around items-center">
         <h1 className="text-2xl font-[anton-regular] text-white">
           Samuel Aragon
