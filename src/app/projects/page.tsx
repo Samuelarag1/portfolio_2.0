@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
-
+import "./styles.css";
+import Link from "next/link";
 const projects: IProjects[] = [
   {
     id: 0,
@@ -56,10 +56,10 @@ const projects: IProjects[] = [
 function ProjectsPage() {
   return (
     <>
-      <div className="from-[#1E555C] to-black bg-gradient-to-b h-full w-screen">
+      <div className="h-full w-screen background-projects">
         <div>
           <Navigation />
-          <h2 className="text-2xl lg:text-4xl text-center font-bold text-white text-shadow lg:mt-10 mg-5">
+          <h2 className="text-2xl lg:text-4xl text-center font-bold text-white text-shadow lg:mt-10 mt-5">
             Proyectos creados y/o participados
           </h2>
           <div className="flex flex-wrap w-full justify-center mt-20 gap-2 lg:mt-44">
@@ -102,19 +102,19 @@ function ProjectsPage() {
             ))}
           </div>
         </div>
-        <div className="w-full flex justify-around">
+        <div className="w-full flex justify-around p-4">
           <div>
-            <a
+            <Link
               href="/"
-              className="bg-[#F15152] h-10 w-40 flex justify-around items-center p-2 rounded-full mr-2 shadow-black shadow-md border-2 border-black text-white hover:text-black  duration-300"
+              className="bg-[#163D42] h-10 w-40 flex justify-around items-center p-2 rounded-full mr-2 shadow-black shadow-md border-2 border-black text-white hover:text-gray-200  duration-300 hover:scale-x-110 hover:scale-y-110"
             >
               <GrLinkPrevious size={25} />
               <strong>Home</strong>
-            </a>
+            </Link>
           </div>
           <div>
             <a href="/skills">
-              <div className="bg-[#F15152] h-10 w-40 flex justify-around items-center p-2 rounded-full mr-2 shadow-black shadow-md border-2 border-black text-white hover:text-black  duration-300">
+              <div className="bg-[#163D42] h-10 w-40 flex justify-around items-center p-2 rounded-full mr-2 shadow-black shadow-md border-2 border-black text-white hover:text-gray-200  duration-300 hover:scale-x-110 hover:scale-y-110">
                 <strong>Skills</strong>
                 <GrLinkNext size={25} />
               </div>
@@ -122,7 +122,6 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

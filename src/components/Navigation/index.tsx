@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { LuDownload, LuLanguages } from "react-icons/lu";
 import Switch from "../Switch";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 function Navigation() {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -42,33 +43,33 @@ function Navigation() {
           </div>
           <div className="w-full mt-5 font-bold text-2xl">
             {path !== "/" ? (
-              <a
+              <Link
                 href="/"
                 className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
               >
                 Inicio
-              </a>
+              </Link>
             ) : (
               ""
             )}
-            <a
+            <Link
               href="/projects"
               className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
             >
               Proyectos
-            </a>
-            <a
+            </Link>
+            <Link
               href="/skills"
               className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
             >
               Skills
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
               className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
             >
               Sobre mi
-            </a>
+            </Link>
           </div>
         </div>
       </div>
