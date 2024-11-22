@@ -108,3 +108,10 @@ body{
     box-shadow: 0 0 150px 20px rgba(22, 125, 185, 0.5);
   }
 }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
