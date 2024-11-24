@@ -70,7 +70,7 @@ function SkillsPage() {
   return (
     <>
       <Navigation />
-      <div className="h-[90vh] w-screen flex flex-col items-center justify-around">
+      <div className="h-[100vh] w-screen flex flex-col items-center justify-around">
         <h3 className="text-[2rem] lg:text-4xl text-center font-bold text-white text-shadow lg:mt-10 mt-5 text-wrap">
           Skills
         </h3>
@@ -84,7 +84,7 @@ function SkillsPage() {
             />
 
             <div className="flex flex-col items-center justify-center text-white text-shadow">
-              <p className="text-3xl">{skillSelected.name}</p>
+              <p className="text-3xl text-center">{skillSelected.name}</p>
               {skillSelected.experience ? (
                 <strong className="text-xl">
                   {skillSelected.experience} years experience
