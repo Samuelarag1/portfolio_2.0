@@ -70,16 +70,16 @@ function SkillsPage() {
   return (
     <>
       <Navigation />
-      <div className="h-[100vh] w-screen flex flex-col items-center justify-around">
+      <div className="h-[100vh] w-screen flex flex-col items-center justify-between">
         <h3 className="text-[2rem] lg:text-4xl text-center font-bold text-white text-shadow lg:mt-10 mt-5 text-wrap">
           Skills
         </h3>
-        <div className="h-96 w-80 lg:h-96 lg:w-96 bg-black bg-opacity-55  flex items-center justify-around flex-col rounded-lg shadow-xl shadow-black">
+        <div className="h-80 w-64 lg:h-96 lg:w-96 bg-black bg-opacity-55  flex items-center justify-around flex-col rounded-lg shadow-xl shadow-black">
           <>
             <Image
               src={skillSelected.icon}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt={skillSelected.name}
             />
 
@@ -104,7 +104,7 @@ function SkillsPage() {
           </>
         </div>
 
-        <div className="bg-black bg-opacity-50 p-4 rounded-full flex items-center gap-3 overflow-x-auto scrollbar-hide scroll-container shadow-md  shadow-black">
+        <div className="bg-black bg-opacity-50 p-4 rounded-full flex items-center gap-3 overflow-x-auto scrollbar-hide scroll-container shadow-md m-4 shadow-black">
           {skills.map((skill, index) => (
             <div key={index} className="flex-shrink-0 scroll-item">
               <Image
