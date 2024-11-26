@@ -92,8 +92,6 @@ function ProjectsPage() {
                   <Card
                     className="w-[350px] flex flex-col h-[400px] justify-around"
                     key={project.id}
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="center-center"
                   >
                     <CardHeader>
                       <CardTitle>{project.name}</CardTitle>
