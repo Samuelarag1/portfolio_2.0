@@ -23,7 +23,7 @@ function AboutPage() {
           </div>
 
           <div className="bg-black bg-opacity-50 m-5 p-2 rounded-lg font-semibold flex flex-col gap-5">
-            <p className="text-white text-start">
+            <p className="text-white text-center">
               Cuento con mas de una año de experiencia laboral desarrollando
               interfaces y sistemas dinamicos en los cuales distintos clientes
               referidos a Kemi&apos Software solicitaban un servicio en
@@ -60,7 +60,7 @@ function AboutPage() {
               className="hover:scale-110 duration-300"
             />
           </a>
-          <h5 className="text-xl font-bold">Contactame!</h5>
+          <h5 className="text-xl font-bold text-white">Contactame!</h5>
         </div>
       </div>
     </>
