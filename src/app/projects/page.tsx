@@ -17,49 +17,49 @@ import Link from "next/link";
 const projects: IProjects[] = [
   {
     id: 0,
-    name: "Ecommerce",
-    stack: ["Postgresql", "NextJs", "Zustand"],
+    name: "What Eat today",
+    stack: ["Nextjs", "Tailwindcss"],
     details: "lorem ipsum",
-    urlSite: "www.google.com",
+    urlSite: "https://what-eat-today-two.vercel.app/",
     participation: "Owner",
-    image: "",
+    image: "/projects/what-eat-today.png",
   },
+
   {
     id: 1,
     name: "Conversion del Dolar",
     stack: ["React", "Tailwindcss"],
     details: "lorem ipsum",
-    urlSite: "www.google.com",
+    urlSite: "https://dolareuro-six.vercel.app/",
     participation: "Owner",
-    image: "",
+    image: "/projects/dolar-euro.png",
   },
   {
     id: 2,
-    name: "What Eat today",
-    stack: ["Nextjs", "Tailwindcss"],
+    name: "Ecommerce",
+    stack: ["Postgresql", "NextJs", "Zustand"],
     details: "lorem ipsum",
-    urlSite: "www.google.com",
+    urlSite: "https://www.google.com",
     participation: "Owner",
-    image: "",
+    image: "/projects/ecommerce.png",
   },
-
   {
     id: 3,
     name: "Sistemas ERP",
     stack: ["NextJS", "Tailwindcss", "Kemi's Components"],
-    details: "",
-    urlSite: "",
-    participation: "",
-    image: "",
+    details: "lorem ipsum",
+    urlSite: "https://www.kemis.com.br/",
+    participation: "Employee",
+    image: "/projects/kemis.png",
   },
   {
     id: 4,
     name: "Harvey Constructor",
     stack: ["NextJS", "Tailwindcss"],
-    details: "",
-    urlSite: "",
-    participation: "",
-    image: "",
+    details: "lorem ipsum",
+    urlSite: "https://construtor.mcf.house/",
+    participation: "Employee",
+    image: "/projects/harvey-4.png",
   },
 ];
 
@@ -93,13 +93,17 @@ function ProjectsPage() {
                         </div>
                       </CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <Image
-                        src={project.image}
-                        width={100}
-                        height={100}
-                        alt={project.name}
-                      />
+                    <CardContent className="w-full h-full">
+                      <a href={project.urlSite} target="_blank">
+                        <Image
+                          src={project?.image}
+                          width={400}
+                          height={300}
+                          alt={project.name}
+                          objectFit="cover"
+                          className="rounded-sm shadow hover:scale-110 duration-300 hover:cursor-pointer"
+                        />
+                      </a>
                     </CardContent>
                     <CardFooter className="flex justify-between">
                       <Button variant={"destructive"}>Repositorio</Button>
