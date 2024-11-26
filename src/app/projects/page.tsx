@@ -1,5 +1,6 @@
+"use client";
 import Navigation from "@/components/Navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import { IProjects } from "../../../Models/Projects";
 import {
   Card,
@@ -14,6 +15,8 @@ import { Button } from "@/components/ui/button";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import "./styles.css";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const projects: IProjects[] = [
   {
@@ -70,6 +73,10 @@ const projects: IProjects[] = [
 ];
 
 function ProjectsPage() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <div className="h-full lg:h-screen w-screen background-projects">
@@ -85,6 +92,8 @@ function ProjectsPage() {
                   <Card
                     className="w-[350px] flex flex-col h-[400px] justify-around"
                     key={project.id}
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-center"
                   >
                     <CardHeader>
                       <CardTitle>{project.name}</CardTitle>
