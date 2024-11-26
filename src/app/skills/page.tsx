@@ -130,7 +130,7 @@ function SkillsPage() {
             </Link>
           </div>
           <div>
-            <a href="/skills">
+            <a href="/about">
               <div className="bg-black h-12 w-40 flex justify-between items-center p-6 rounded-full shadow-black shadow-md border-2 border-black text-white hover:text-gray-200 duration-300 hover:scale-x-110 hover:scale-y-110">
                 <strong>About me</strong>
                 <GrLinkNext size={25} />

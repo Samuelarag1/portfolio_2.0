@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import "./styles.css";
 import Link from "next/link";
+
 const projects: IProjects[] = [
   {
     id: 0,
@@ -23,6 +24,7 @@ const projects: IProjects[] = [
     urlSite: "https://what-eat-today-two.vercel.app/",
     participation: "Owner",
     image: "/projects/what-eat-today.png",
+    urlGithub: "https://github.com/Samuelarag1/what_eat_today",
   },
 
   {
@@ -33,6 +35,7 @@ const projects: IProjects[] = [
     urlSite: "https://dolareuro-six.vercel.app/",
     participation: "Owner",
     image: "/projects/dolar-euro.png",
+    urlGithub: "https://github.com/Samuelarag1/Dolar",
   },
   {
     id: 2,
@@ -42,6 +45,7 @@ const projects: IProjects[] = [
     urlSite: "https://www.google.com",
     participation: "Owner",
     image: "/projects/ecommerce.png",
+    urlGithub: "https://github.com/Samuelarag1/ImportacionesCat",
   },
   {
     id: 3,
@@ -51,6 +55,7 @@ const projects: IProjects[] = [
     urlSite: "https://www.kemis.com.br/",
     participation: "Employee",
     image: "/projects/kemis.png",
+    urlGithub: "",
   },
   {
     id: 4,
@@ -60,6 +65,7 @@ const projects: IProjects[] = [
     urlSite: "https://construtor.mcf.house/",
     participation: "Employee",
     image: "/projects/harvey-4.png",
+    urlGithub: "",
   },
 ];
 
@@ -94,7 +100,7 @@ function ProjectsPage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="w-full h-full">
-                      <a href={project.urlSite} target="_blank">
+                      <a href={`/${project.id}`}>
                         <Image
                           src={project?.image}
                           width={400}
@@ -104,10 +110,26 @@ function ProjectsPage() {
                           className="rounded-sm shadow hover:scale-110 duration-300 hover:cursor-pointer"
                         />
                       </a>
+
+                      <CardDescription className="text-center text-black font-semibold m-2">
+                        Pulsa sobre la imagen para ir a los detalles del
+                        proyecto
+                      </CardDescription>
                     </CardContent>
                     <CardFooter className="flex justify-between">
-                      <Button variant={"destructive"}>Repositorio</Button>
-                      <Button>Visit</Button>
+                      <Button
+                        variant={"destructive"}
+                        disabled={project.urlGithub ? false : true}
+                      >
+                        <a href={project?.urlGithub} target="_blank">
+                          Repositorio
+                        </a>
+                      </Button>
+                      <Button>
+                        <a href={project.urlSite} target="_blank">
+                          Visit
+                        </a>
+                      </Button>
                     </CardFooter>
                   </Card>
                 </div>

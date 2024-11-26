@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <div className="lg:h-screen h-screen w-screen flex-col flex items-center justify-around lg:flex-row lg:flex-wrap lg:justify-around">
+      <div className="lg:h-screen h-full w-screen flex-col flex items-center justify-around lg:flex-row lg:flex-wrap lg:justify-around">
         <Header />
         <div className="bg-black bg-opacity-50 p-4 h-56 w-80 rounded-lg lg:w-[60%] lg:h-36">
           <p className="text-white font-semibold text-wrap lg:text-xl text-center">

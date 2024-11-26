@@ -108,6 +108,24 @@ body{
     box-shadow: 0 0 150px 20px rgba(22, 125, 185, 0.5);
   }
 }
+
+.profilePicture2 {
+  border-radius: 50%;
+  z-index: -1;
+  animation: shadowAnimation2 3s linear infinite alternate-reverse;
+  margin: auto;
+  margin-top: auto;
+}
+
+@keyframes shadowAnimation2 {
+  0% {
+    box-shadow: 0 0 150px 20px rgb(14, 29, 116);
+  }
+
+  100% {
+    box-shadow: 0 0 150px 20px rgba(223, 245, 30, 0.5);
+  }
+}
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
