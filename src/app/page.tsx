@@ -16,17 +16,13 @@ export default function Home() {
         <Header />
         <div className="bg-black bg-opacity-50 p-4 h-56 w-80 rounded-lg lg:w-[60%] lg:h-36">
           <p className="text-white font-semibold text-wrap lg:text-xl text-center">
-            Desarrollador de software con más de 2 años de experiencia,
-            especializado en frontend/backend y optimización de aplicaciones web
-            escalables. Trabajo con tecnologías como NestJS, y React, aplicando
-            prácticas modernas para ofrecer soluciones robustas y de alto
-            rendimiento.
+            {language.pages.home.description}
           </p>
         </div>
         <div className="flex flex-col w-full">
           <div className="flex flex-col items-center">
             <h4 className="font-bold text-white text-xl lg:text-3xl">
-              Redes sociales
+              {language.pages.home.navtitle}
             </h4>
             <div className="h-20 w-80 bg-black bg-opacity-50 rounded-full  shadow-black shadow-lg m-2">
               <div className="flex w-full justify-around align-middle items-center h-full">

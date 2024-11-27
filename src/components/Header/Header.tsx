@@ -1,11 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import { useLanguage } from "../../../context/LanguageContext";
 
 function Header() {
+  const { language } = useLanguage();
   return (
     <header className="flex flex-col items-center mt-5 gap-2 lg:flex-col-reverse lg:gap-10">
       <h1 className="text-center text-2xl lg:text-3xl font-bold text-white">
-        Software Developer
+        {language.pages.home.title}
       </h1>
 
       <div className="flex flex-col items-center align-middle justify-center">
