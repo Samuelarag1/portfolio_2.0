@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import ISkills from "../../../Models/Skills";
+import { useLanguage } from "../../../context/LanguageContext";
 
 const skills: ISkills[] = [
   {
@@ -62,8 +63,9 @@ const skills: ISkills[] = [
   },
 ];
 function SkillsPage() {
+  const { language } = useLanguage();
   const [skillSelected, setSkillSelected] = useState<ISkills>({
-    name: "Seleccione una tecnologia",
+    name: language.pages.skills.select_skill,
     icon: "/touch.png",
   });
 
@@ -87,7 +89,9 @@ function SkillsPage() {
               <p className="text-3xl text-center">{skillSelected.name}</p>
               {skillSelected.experience ? (
                 <strong className="text-xl">
-                  {skillSelected.experience} years experience
+                  {skillSelected.experience +
+                    " " +
+                    language.pages.skills.years_skill}
                 </strong>
               ) : (
                 ""
@@ -126,13 +130,15 @@ function SkillsPage() {
               className="bg-black h-12 w-40 flex justify-between items-center p-6 rounded-full shadow-black shadow-md border-2 border-black text-white hover:text-gray-200 duration-300 hover:scale-x-110 hover:scale-y-110"
             >
               <GrLinkPrevious size={25} />
-              <strong className="text-white">Projects</strong>
+              <strong className="text-white">
+                {language.buttons.projects}
+              </strong>
             </Link>
           </div>
           <div>
             <Link href="/about">
               <div className="bg-black h-12 w-40 flex justify-between items-center p-6 rounded-full shadow-black shadow-md border-2 border-black text-white hover:text-gray-200 duration-300 hover:scale-x-110 hover:scale-y-110">
-                <strong>About me</strong>
+                <strong>{language.buttons.about}</strong>
                 <GrLinkNext size={25} />
               </div>
             </Link>

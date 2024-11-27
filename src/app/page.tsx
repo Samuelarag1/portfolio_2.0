@@ -5,8 +5,10 @@ import Link from "next/link";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { GrLinkNext } from "react-icons/gr";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Home() {
+  const { language } = useLanguage();
   return (
     <>
       <Navigation />
@@ -58,7 +60,7 @@ export default function Home() {
               href="/projects"
               className="bg-black h-12 w-40 flex justify-between items-center p-6 rounded-full shadow-black shadow-md border-2 border-black text-white hover:text-gray-200 duration-300 hover:scale-x-110 hover:scale-y-110"
             >
-              <strong>Proyectos</strong>
+              <strong> {language.buttons.projects}</strong>
               <GrLinkNext size={25} />
             </Link>
           </div>

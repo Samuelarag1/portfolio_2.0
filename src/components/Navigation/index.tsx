@@ -4,9 +4,11 @@ import { LuDownload, LuLanguages } from "react-icons/lu";
 import Switch from "../Switch";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useLanguage } from "../../../context/LanguageContext";
 
 function Navigation() {
   const [toggle, setToggle] = useState<boolean>(false);
+  const { language, toggleLanguage } = useLanguage();
   const path = usePathname();
 
   const handleOnToggle = () => {
@@ -40,7 +42,10 @@ function Navigation() {
               </Link>
             </div>
             <div>
-              <button className="flex w-28 justify-center gap-2 align-middle items-center mt-4 ml-4 bg-[#1E555C] text-white p-2 rounded-full border-black border-2 hover:bg-[#0d2629] hover:text-gray-200 transition duration-300">
+              <button
+                onClick={toggleLanguage}
+                className="flex w-28 justify-center gap-2 align-middle items-center mt-4 ml-4 bg-[#1E555C] text-white p-2 rounded-full border-black border-2 hover:bg-[#0d2629] hover:text-gray-200 transition duration-300"
+              >
                 <LuLanguages size={20} color={"white"} />
                 EN/ES
               </button>
@@ -52,7 +57,7 @@ function Navigation() {
                 href="/"
                 className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
               >
-                Inicio
+                {language.navigation.home}
               </Link>
             ) : (
               ""
@@ -61,19 +66,19 @@ function Navigation() {
               href="/projects"
               className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
             >
-              Proyectos
+              {language.navigation.projects}
             </Link>
             <Link
               href="/skills"
               className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
             >
-              Skills
+              {language.navigation.skills}
             </Link>
             <Link
               href="/about"
               className="block mt-4 ml-4 text-white hover:text-[#F15152] duration-300 "
             >
-              Sobre mi
+              {language.navigation.about}
             </Link>
           </div>
         </div>
