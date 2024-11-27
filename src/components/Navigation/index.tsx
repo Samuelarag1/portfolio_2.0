@@ -29,14 +29,15 @@ function Navigation() {
         <div className="flex flex-col h-56 w-full">
           <div className="flex w-full justify-around items-center align-middle">
             <div>
-              <a
+              <Link
                 href="/CV.pdf"
+                target="_blank"
                 download={"/CV.pdf"}
                 className="flex gap-2 align-middle items-center mt-4 bg-[#F15152] text-white w-24 justify-center p-2 rounded-full border-black border-2 hover:bg-[#6d2525] hover:text-gray-200 transition duration-300"
               >
                 <LuDownload size={20} color={"white"} />
                 CV
-              </a>
+              </Link>
             </div>
             <div>
               <button className="flex w-28 justify-center gap-2 align-middle items-center mt-4 ml-4 bg-[#1E555C] text-white p-2 rounded-full border-black border-2 hover:bg-[#0d2629] hover:text-gray-200 transition duration-300">

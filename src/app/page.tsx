@@ -28,27 +28,27 @@ export default function Home() {
             </h4>
             <div className="h-20 w-80 bg-black bg-opacity-50 rounded-full  shadow-black shadow-lg m-2">
               <div className="flex w-full justify-around align-middle items-center h-full">
-                <a
+                <Link
                   href="https://www.linkedin.com/in/samuelarag1/"
                   target="_blank"
                   className="hover:scale-110 duration-300"
                 >
                   <FaLinkedin size={50} color="#0072b1" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.github.com/samuelarag1/"
                   target="_blank"
                   className="hover:scale-110 duration-300"
                 >
                   <FaGithubSquare size={50} color="#FC573B" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://wa.me/3834934797"
                   target="_blank"
                   className="hover:scale-110 duration-300"
                 >
                   <IoLogoWhatsapp size={50} color="#00B569" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
