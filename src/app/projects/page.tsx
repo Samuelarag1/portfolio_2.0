@@ -76,6 +76,26 @@ function ProjectsPage() {
       image: "/projects/harvey-4.png",
       urlGithub: "",
     },
+    {
+      id: 5,
+      name: "RentaFacil",
+      stack: ["NextJS", "Tailwindcss"],
+      details: "lorem ipsum",
+      urlSite: "https://apartment-rentals.vercel.app/",
+      participation: language.pages.projects.card_owner,
+      image: "/projects/rent_apartment.png",
+      urlGithub: "https://github.com/Samuelarag1/apartment-rentals",
+    },
+    {
+      id: 6,
+      name: "Ferreteria Amiga",
+      stack: ["NextJS", "Tailwindcss"],
+      details: "lorem ipsum",
+      urlSite: "https://ferreteria-amiga.vercel.app/",
+      participation: language.pages.projects.card_owner,
+      image: "/projects/ferre.png",
+      urlGithub: "https://github.com/Samuelarag1/ferreteria-amiga",
+    },
   ];
   return (
     <>
