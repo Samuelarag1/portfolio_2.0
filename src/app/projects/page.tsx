@@ -35,6 +35,26 @@ function ProjectsPage() {
       image: "/projects/what-eat-today.png",
       urlGithub: "https://github.com/Samuelarag1/what_eat_today",
     },
+    {
+      id: 7,
+      name: "Zurdoo Tattoo",
+      stack: ["Nextjs", "Tailwindcss"],
+      details: "lorem ipsum",
+      urlSite: "https://zurdo-tattoo.vercel.app/",
+      participation: language.pages.projects.card_owner,
+      image: "/projects/zurdo-tattoo.png",
+      urlGithub: "https://github.com/Samuelarag1/zurdo-tattoo",
+    },
+    {
+      id: 8,
+      name: "SamaragTech",
+      stack: ["Nextjs", "Tailwindcss"],
+      details: "lorem ipsum",
+      urlSite: "https://samaragtech.com",
+      participation: language.pages.projects.card_owner,
+      image: "/projects/samaragtech.png",
+      urlGithub: "https://github.com/Samuelarag1/ayssolutions",
+    },
 
     {
       id: 1,
