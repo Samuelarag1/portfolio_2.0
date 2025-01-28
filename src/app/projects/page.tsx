@@ -119,7 +119,7 @@ function ProjectsPage() {
   ];
   return (
     <>
-      <div className="h-full lg:h-screen w-screen background-projects">
+      <div className="h-full lg:h-full w-screen background-projects">
         <div>
           <Navigation />
           <h2 className="text-2xl lg:text-4xl text-center font-bold text-white text-shadow lg:mt-10 mt-5 text-wrap">
